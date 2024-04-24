@@ -18,5 +18,54 @@ Nas variáveis de ambientes adicionar o caminho no path.
   ASM Code Lens
   Hex Hover Converter
   DeZog
+----
+Cabeçalho
 
+    DEVICE NOSLOT64K
+    SLDOPT COMMENT WPMEM, LOGPOINT, ASSERTION
+    
+---
+Para compilar:
+sudo chmod +x compilar.sh (no linux)
+sudo sh compilar.sh
+
+
+--
+Exemplo de configuração do json -> RUN AND Debug
+
+{
+    "configurations": [
+    {
+        "type": "dezog",
+        "request": "launch",
+        "name": "Simulator - Bare Z80",
+        "remoteType": "zsim",
+        "zsim": {
+            "visualMemory": true,
+            "memoryModel": "RAM"
+        },
+        "sjasmplus": [
+            {
+                "path": "Prog1.sld"
+            }
+        ],
+        "commandsAfterLaunch": [],
+        "history": {
+            "reverseDebugInstructionCount": 1000000,
+            "spotCount": 10,
+            "codeCoverageEnabled": true
+        },
+        "startAutomatically": false,
+        "rootFolder": "${workspaceFolder}/Prog1",
+        "loadObjs": [
+            {
+                "path": "Prog1.obj",
+                "start": "0x0000"
+            }
+        ],
+        "execAddress": "0x0000",
+        "topOfStack": "0x4000"
+    }
+    ]
+}
 
