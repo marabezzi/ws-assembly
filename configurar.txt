@@ -1,0 +1,22 @@
+Baixar o compilador em:
+https://github.com/z00m128/sjasmplus/releases/
+
+para instalar o compilador você deve:
+(Windows)
+Extrair no C:\sjasmplus\
+Nas variáveis de ambientes adicionar o caminho no path.
+(linux)
+ digitar no terminal: 
+  tar xz o nome do arquivo
+  make
+  sudo make install
+  
+  
+  Instalar extensões no Vscode
+  Z80 Macro-Assembler
+  Z80 Instruction Set
+  ASM Code Lens
+  Hex Hover Converter
+  DeZog
+
+
