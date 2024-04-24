@@ -1,0 +1,11 @@
+# file opened: Prog1.asm
+1     0000                  DEVICE NOSLOT64K
+2     0000                  SLDOPT COMMENT WPMEM, LOGPOINT, ASSERTION
+3     0000
+4     0000                  org 0000h
+5     0000
+6     0000 3E 01            ld a,01h
+7     0002 06 02            ld b,02h
+8     0004 80               add a,b
+9     0005 76               halt
+# file closed: Prog1.asm
